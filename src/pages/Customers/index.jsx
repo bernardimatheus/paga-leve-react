@@ -26,13 +26,7 @@ function Customers() {
           Clientes
         </Heading>
       </Container>
-
-      <Columns is-mobile="true" is-widescreen="true">
-        {customers &&
-          customers.map((customer) => (
-            <CustomerCard key={customer.customerId} customer={customer} />
-          ))}
-      </Columns>
+      <CustomerCard customers={customers} />
     </Container>
   );
 }

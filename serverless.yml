@@ -3,8 +3,11 @@ app: paga-leve-react
 name: react-starter
 component: website
 
-plugins:
-  - serverless-dotenv-plugin
+provider:
+  name: aws
+  stage: dev
+  environment:
+    REACT_APP_API_URL: https://v3b2slwkhg.execute-api.us-east-1.amazonaws.com/dev
 
 inputs:
   src:
