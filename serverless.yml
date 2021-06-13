@@ -14,3 +14,5 @@ inputs:
     src: ./src
     hook: npm run build
     dist: ./dist
+  env:
+    REACT_APP_API_URL: https://v3b2slwkhg.execute-api.us-east-1.amazonaws.com/dev
