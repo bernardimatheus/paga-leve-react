@@ -17,6 +17,8 @@ function Home() {
     },
   };
 
+  console.log(process.env.NODE_ENV);
+
   return (
     <Container display="flex" flexDirection="column" alignItems="center">
       <Media mt={3}>
