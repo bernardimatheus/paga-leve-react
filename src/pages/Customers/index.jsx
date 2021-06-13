@@ -8,10 +8,13 @@ import CustomerCard from './components/CustomerCard';
 function Customers() {
   const history = useHistory();
   const [customers, setCustomers] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
+
     api.get(`/customers`).then((res) => {
-      console.log(res.data);
+      setLoading(false);
       setCustomers(res.data);
     });
   }, []);
