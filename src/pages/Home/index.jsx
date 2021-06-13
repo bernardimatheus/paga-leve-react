@@ -25,7 +25,7 @@ function Home() {
         </Media.Item>
       </Media>
       <Heading alignItems="center" textColor="primary">
-        Paga Leve - Test
+        Paga Leve
       </Heading>
 
       <Container display="flex" flexDirection="column" alignItems="center">

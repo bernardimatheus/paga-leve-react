@@ -7,7 +7,6 @@ jspm_packages
 .env
 .env.dev
 .cache
-.cache/*
 
 # Webpack and distribution directories
 .webpack
