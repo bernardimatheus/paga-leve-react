@@ -6,6 +6,8 @@ import { ToastContainer } from 'react-toastify';
 
 import 'bulma/css/bulma.min.css';
 
+require('dotenv').config();
+
 function App() {
   return (
     <Router history={history}>
