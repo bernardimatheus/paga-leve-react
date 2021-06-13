@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'serverless';
+  src: url('./fonts/serverless-regular.woff2') format('woff2'),
+    url('./fonts/serverless-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body,
+div {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  font-family: 'serverless', 'HelveticaNeue-Regular', 'Helvetica Neue Regular', 'Helvetica Neue',
+    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  word-wrap: break-word;
+  letter-spacing: 0.25px;
+}
+
+html,
+body {
+  color: 'white';
+  background: #4b4e66;
+}
+
+.container {
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 30px 50px 50px 50px;
+}
+
+/**
+ * Animations
+ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
