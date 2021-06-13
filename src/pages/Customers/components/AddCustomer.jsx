@@ -27,13 +27,11 @@ function AddComponent(props) {
     };
 
     if (saveAction === 'edit') {
-      api
-        .put(`${process.env.REACT_APP_API_URL}/customers/${customerId}`, customerParams)
-        .then((res) => {
-          history.push('/customers');
-        });
+      api.put(`/customers/${customerId}`, customerParams).then((res) => {
+        history.push('/customers');
+      });
     } else {
-      api.post(`${process.env.REACT_APP_API_URL}/customers`, customerParams).then((res) => {
+      api.post(`/customers`, customerParams).then((res) => {
         history.push('/customers');
       });
     }
