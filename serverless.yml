@@ -7,7 +7,7 @@ provider:
   name: aws
   stage: dev
   environment:
-    REACT_APP_API_URL: 'https://v3b2slwkhg.execute-api.us-east-1.amazonaws.com/dev'
+    REACT_APP_API_URL: ${param:REACT_APP_API_URL}
 
 inputs:
   src:
