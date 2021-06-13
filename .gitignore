@@ -6,6 +6,7 @@ jspm_packages
 .serverless
 .env
 .env.dev
+.env.development
 .cache
 
 # Webpack and distribution directories
