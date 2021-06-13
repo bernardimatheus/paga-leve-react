@@ -18,18 +18,17 @@ function Home() {
   };
 
   return (
-    <Container centered="true">
-      <Media>
+    <Container display="flex" flexDirection="column" alignItems="center">
+      <Media mt={3}>
         <Media.Item alignItems="center">
           <Image src={pagaLeve} size={128} />
         </Media.Item>
       </Media>
-      <Container>
-        <Heading alignItems="center" textColor="primary">
-          Paga Leve - Test
-        </Heading>
-      </Container>
-      <Container>
+      <Heading alignItems="center" textColor="primary">
+        Paga Leve - Test
+      </Heading>
+
+      <Container display="flex" flexDirection="column" alignItems="center">
         <Lottie options={defaultOptions} height={300} width={300} />
         <Button mt="1" color="primary" size="large" onClick={() => history.push('/customers')}>
           Consultar clientes
