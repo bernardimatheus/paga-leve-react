@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import {
   Card,
@@ -17,6 +17,7 @@ import api from '../../../services/api';
 
 function CustomerCard({ customers, setCustomers }) {
   const history = useHistory();
+  const [loading, isLoading] = useState(false);
 
   const handleDeleteCustomer = (customerId) => {
     api.delete(`/customers/${customerId}`).then((res) => {
@@ -54,7 +55,7 @@ function CustomerCard({ customers, setCustomers }) {
                   </Content>
                 </Card.Content>
                 <Card.Footer display="flex" justifyContent="flex-end">
-                  <Content>
+                  <Button m={1} size="normal" outlined="true" style={{ borderColor: 'white' }}>
                     <Icon
                       onClick={() =>
                         history.push({
@@ -66,15 +67,16 @@ function CustomerCard({ customers, setCustomers }) {
                     >
                       <FaEdit color="#00d1b2" />
                     </Icon>
-                  </Content>
-                  <Content>
+                  </Button>
+
+                  <Button m={1} size="normal" outlined="true" style={{ borderColor: 'white' }}>
                     <Icon
                       onClick={() => handleDeleteCustomer(customer.customerId)}
                       style={{ cursor: 'pointer' }}
                     >
                       <FaTrash color="red" />
                     </Icon>
-                  </Content>
+                  </Button>
                 </Card.Footer>
               </Card>
             </Columns.Column>
