@@ -19,14 +19,14 @@ function Customers() {
   return (
     <Container style={{ maxWidth: '1200px' }}>
       <Container display="flex" justifyContent="flex-start" py={6}>
-        <Icon onClick={() => history.goBack()} style={{ cursor: 'pointer' }}>
+        <Icon onClick={() => history.push('/')} style={{ cursor: 'pointer' }}>
           <FaAngleLeft color="white" />
         </Icon>
         <Heading subtitle style={{ color: 'white' }}>
           Clientes
         </Heading>
       </Container>
-      <CustomerCard customers={customers} />
+      <CustomerCard customers={customers} setCustomers={setCustomers} />
     </Container>
   );
 }
