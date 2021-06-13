@@ -4,6 +4,7 @@ import { FaAngleLeft } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
 import CustomerCard from './components/CustomerCard';
+import ReactLoading from 'react-loading';
 
 function Customers() {
   const history = useHistory();
@@ -29,7 +30,11 @@ function Customers() {
           Clientes
         </Heading>
       </Container>
-      <CustomerCard customers={customers} setCustomers={setCustomers} />
+      {loading ? (
+        <ReactLoading type="spin" color="#00d1b2" height={500} width={275} />
+      ) : (
+        <CustomerCard customers={customers} setCustomers={setCustomers} />
+      )}
     </Container>
   );
 }
