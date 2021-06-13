@@ -3,6 +3,9 @@ app: paga-leve-react
 name: react-starter
 component: website
 
+plugins:
+  - serverless-dotenv-plugin
+
 inputs:
   src:
     src: ./src
